@@ -1,11 +1,11 @@
 <?php
 
-namespace Eduardokum\LaravelBoleto\Boleto\Banco;
+namespace CMSBillet\LaravelBoleto\Boleto\Banco;
 
-use Eduardokum\LaravelBoleto\Boleto\AbstractBoleto;
-use Eduardokum\LaravelBoleto\CalculoDV;
-use Eduardokum\LaravelBoleto\Contracts\Boleto\Boleto as BoletoContract;
-use Eduardokum\LaravelBoleto\Util;
+use CMSBillet\LaravelBoleto\Boleto\AbstractBoleto;
+use CMSBillet\LaravelBoleto\CalculoDV;
+use CMSBillet\LaravelBoleto\Contracts\Boleto\Boleto as BoletoContract;
+use CMSBillet\LaravelBoleto\Util;
 
 class Banrisul extends AbstractBoleto implements BoletoContract
 {

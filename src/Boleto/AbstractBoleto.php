@@ -1,20 +1,20 @@
 <?php
 
-namespace Eduardokum\LaravelBoleto\Boleto;
+namespace CMSBillet\LaravelBoleto\Boleto;
 
 use Carbon\Carbon;
-use Eduardokum\LaravelBoleto\Boleto\Render\Html;
-use Eduardokum\LaravelBoleto\Boleto\Render\Pdf;
-use Eduardokum\LaravelBoleto\Boleto\Render\PdfCaixa;
-use Eduardokum\LaravelBoleto\Contracts\Boleto\Boleto;
-use Eduardokum\LaravelBoleto\Contracts\Pessoa as PessoaContract;
-use Eduardokum\LaravelBoleto\Contracts\Boleto\Boleto as BoletoContract;
-use Eduardokum\LaravelBoleto\Util;
+use CMSBillet\LaravelBoleto\Boleto\Render\Html;
+use CMSBillet\LaravelBoleto\Boleto\Render\Pdf;
+use CMSBillet\LaravelBoleto\Boleto\Render\PdfCaixa;
+use CMSBillet\LaravelBoleto\Contracts\Boleto\Boleto;
+use CMSBillet\LaravelBoleto\Contracts\Pessoa as PessoaContract;
+use CMSBillet\LaravelBoleto\Contracts\Boleto\Boleto as BoletoContract;
+use CMSBillet\LaravelBoleto\Util;
 
 /**
  * Class AbstractBoleto
  *
- * @package Eduardokum\LaravelBoleto\Boleto
+ * @package CMSBillet\LaravelBoleto\Boleto
  */
 abstract class AbstractBoleto implements BoletoContract
 {

@@ -1,10 +1,10 @@
 <?php
-namespace Eduardokum\LaravelBoleto\Cnab\Retorno\Cnab400\Banco;
+namespace CMSBillet\LaravelBoleto\Cnab\Retorno\Cnab400\Banco;
 
-use Eduardokum\LaravelBoleto\Cnab\Retorno\Cnab400\AbstractRetorno;
-use Eduardokum\LaravelBoleto\Contracts\Boleto\Boleto as BoletoContract;
-use Eduardokum\LaravelBoleto\Contracts\Cnab\RetornoCnab400;
-use Eduardokum\LaravelBoleto\Util;
+use CMSBillet\LaravelBoleto\Cnab\Retorno\Cnab400\AbstractRetorno;
+use CMSBillet\LaravelBoleto\Contracts\Boleto\Boleto as BoletoContract;
+use CMSBillet\LaravelBoleto\Contracts\Cnab\RetornoCnab400;
+use CMSBillet\LaravelBoleto\Util;
 use Illuminate\Support\Arr;
 
 class Santander extends AbstractRetorno implements RetornoCnab400

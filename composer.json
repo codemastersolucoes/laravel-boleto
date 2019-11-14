@@ -1,5 +1,5 @@
 {
-    "name": "eduardokum/laravel-boleto",
+    "name": "codemastersolucoes/laravel-boleto",
     "description": "Biblioteca com boletos para o laravel",
     "keywords": [
         "eduardokum",
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Eduardokum\\LaravelBoleto\\": "src"
+            "CMSBillet\\LaravelBoleto\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Eduardokum\\LaravelBoleto\\Tests\\": "tests"
+            "CMSBillet\\LaravelBoleto\\Tests\\": "tests"
         }
     },
     "config": {

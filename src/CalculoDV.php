@@ -1,5 +1,5 @@
 <?php
-namespace Eduardokum\LaravelBoleto;
+namespace CMSBillet\LaravelBoleto;
 
 class CalculoDV
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Eduardokum\LaravelBoleto;
+namespace CMSBillet\LaravelBoleto;
 
 trait MagicTrait
 {
