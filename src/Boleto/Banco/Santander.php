@@ -26,24 +26,24 @@ class Santander extends AbstractBoleto implements BoletoContract
      *
      * @var array
      */
-    protected $carteiras = ['101', '201'];
+    protected $carteiras = ['101', '201', 'RCR'];
     /**
      * Espécie do documento, código para remessa 240
      *
      * @var string
      */
     protected $especiesCodigo240 = [
-        'DM'  => '02',
-        'DS'  => '04',
-        'LC'  => '07',
-        'NP'  => '12',
-        'NR'  => '13',
-        'RC'  => '17',
-        'AP'  => '20',
+        'DM' => '02',
+        'DS' => '04',
+        'LC' => '07',
+        'NP' => '12',
+        'NR' => '13',
+        'RC' => '17',
+        'AP' => '20',
         'BCC' => '31',
         'BDP' => '32',
-        'CH'  => '97',
-        'ND'  => '98'
+        'CH' => '97',
+        'ND' => '98'
     ];
     /**
      * Espécie do documento, código para remessa 400
@@ -51,12 +51,12 @@ class Santander extends AbstractBoleto implements BoletoContract
      * @var string
      */
     protected $especiesCodigo400 = [
-        'DM'  => '01',
-        'NP'  => '02',
-        'AP'  => '03',
-        'RC'  => '05',
-        'DP'  => '06',
-        'LC'  => '07',
+        'DM' => '01',
+        'NP' => '02',
+        'AP' => '03',
+        'RC' => '05',
+        'DP' => '06',
+        'LC' => '07',
         'BDP' => '08',
         'BCC' => '19',
     ];
@@ -72,6 +72,7 @@ class Santander extends AbstractBoleto implements BoletoContract
      * @var array
      */
     protected $carteirasNomes = [
+        'RCR' => 'RCR',
         '101' => 'Cobrança Simples ECR',
         '102' => 'Cobrança Simples CSR',
         '201' => 'Penhor'
@@ -124,6 +125,9 @@ class Santander extends AbstractBoleto implements BoletoContract
             case '201':
                 $carteira = '1';
                 break;
+            case 'RCR':
+                $carteira = '101';
+                break;
             default:
                 $carteira = $this->carteira;
                 break;
@@ -172,6 +176,9 @@ class Santander extends AbstractBoleto implements BoletoContract
                 break;
             case '4':
                 $carteira = '102';
+                break;
+            case 'RCR':
+                $carteira = '101';
                 break;
         }
         return parent::setCarteira($carteira);
@@ -256,16 +263,16 @@ class Santander extends AbstractBoleto implements BoletoContract
     public static function parseCampoLivre($campoLivre)
     {
         return [
-            'convenio'        => null,
-            'agencia'         => null,
-            'agenciaDv'       => null,
-            'contaCorrente'   => null,
+            'convenio' => null,
+            'agencia' => null,
+            'agenciaDv' => null,
+            'contaCorrente' => null,
             'contaCorrenteDv' => null,
-            'codigoCliente'   => substr($campoLivre, 1, 7),
-            'nossoNumero'     => substr($campoLivre, 8, 12),
-            'nossoNumeroDv'   => substr($campoLivre, 20, 1),
+            'codigoCliente' => substr($campoLivre, 1, 7),
+            'nossoNumero' => substr($campoLivre, 8, 12),
+            'nossoNumeroDv' => substr($campoLivre, 20, 1),
             'nossoNumeroFull' => substr($campoLivre, 8, 13),
-            'carteira'        => substr($campoLivre, 22, 3),
+            'carteira' => substr($campoLivre, 22, 3),
         ];
     }
 }
