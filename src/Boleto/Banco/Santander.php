@@ -73,7 +73,7 @@ class Santander extends AbstractBoleto implements BoletoContract
      */
     protected $carteirasNomes = [
         'RCR' => 'RCR',
-        '101' => 'Cobrança Simples ECR',
+        '101' => 'RCR',
         '102' => 'Cobrança Simples CSR',
         '201' => 'Penhor'
     ];
@@ -175,7 +175,7 @@ class Santander extends AbstractBoleto implements BoletoContract
                 $carteira = '102';
                 break;
             case 'RCR':
-                $carteira = 'RCR';
+                $carteira = '101';
                 break;
         }
         return parent::setCarteira($carteira);
