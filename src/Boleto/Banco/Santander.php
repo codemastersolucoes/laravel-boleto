@@ -125,6 +125,9 @@ class Santander extends AbstractBoleto implements BoletoContract
             case '201':
                 $carteira = '1';
                 break;
+            case 'RCR':
+                $carteira = '101';
+                break;
             default:
                 $carteira = $this->carteira;
                 break;
